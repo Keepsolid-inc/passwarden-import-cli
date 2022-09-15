@@ -1,0 +1,44 @@
+{
+  "name": "FirefoxSchema",
+  "INPUT_FILE_EXTENSION": "csv",
+  "PREPARSE_ELEMENT_TYPE": "array",
+  "ADDITIONAL_KEY_FOR_PARSE": "",
+  "FIRST_LEVEL_KEY": {
+    "key": "",
+    "isArray": false
+  },
+  "REQUIRES_JSON_PARSING": null,
+  "RECORD_TYPE_KEY": {
+    "key": ""
+  },
+  "RAW_ITEM_TYPE_KEY": {
+    "key": "label"
+  },
+  "RAW_ITEM_VALUE_KEY": {
+    "key": "value"
+  },
+  "DEFAULT_CATEGORY": "login",
+  "fields": {
+    "login": {
+      "keys": [
+        "login"
+      ],
+      "record_type": 7,
+      "category": 3,
+      "fields": {
+        "username": {
+          "pwKey": "username"
+        },
+        "hostname": {
+          "pwKey": "url"
+        },
+        "url": {
+          "pwKey": "url"
+        },
+        "password": {
+          "pwKey": "password"
+        }
+      }
+    }
+  }
+}

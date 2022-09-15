@@ -1,0 +1,45 @@
+{
+  "name": "psw-import-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "bin": {
+    "psw-import-cli": "./dist/index.js"
+  },
+  "scripts": {
+    "start": "nodemon --watch './src/**/*.ts' --exec 'ts-node' ./src/index.ts",
+    "build": "tsc -p ."
+  },
+  "author": "o.florenko@keepsolid.com",
+  "license": "MIT",
+  "dependencies": {
+    "@types/uzip": "^0.20201231.0",
+    "commander": "^7.1.0",
+    "csv-parse": "^4.8.8",
+    "lodash": "^4.17.15",
+    "luxon": "^1.24.1",
+    "mime": "^2.5.2",
+    "prettier": "^2.6.0",
+    "uzip": "^0.20201231.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/luxon": "^1.21.0",
+    "@types/mime": "^2.0.3",
+    "@types/node": "14.0.27",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^3.7.2"
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "name": "LastPassSchema",
+  "INPUT_FILE_EXTENSION": "csv",
+  "PREPARSE_ELEMENT_TYPE": "array",
+  "ADDITIONAL_KEY_FOR_PARSE": "",
+  "FIRST_LEVEL_KEY": {
+    "key": "",
+    "isArray": false
+  },
+  "REQUIRES_JSON_PARSING": "extra",
+  "RECORD_TYPE_KEY": {
+    "key": "NoteType"
+  },
+  "RAW_ITEM_TYPE_KEY": {
+    "key": "label"
+  },
+  "RAW_ITEM_VALUE_KEY": {
+    "key": "value"
+  },
+  "fields": {
+    "id_cards": {},
+    "passport": {
+      "keys": [
+        "Passport"
+      ],
+      "record_type": 1,
+      "category": 0,
+      "fields": {
+        "Type": {
+          "pwKey": "passport_type"
+        },
+        "Number": {
+          "pwKey": "passport_number"
+        },
+        "Full name": {
+          "pwKey": "full_name"
+        },
+        "Sex": {
+          "pwKey": "gender"
+        },
+        "Nationality": {
+          "pwKey": "nationality"
+        },
+        "Date of Birth": {
+          "pwKey": "date_of_birth",
+          "convertToDateFromString": true
+        },
+        "Issued at": {
+          "pwKey": "place_of_issue"
+        },
+        "Issued Date": {
+          "pwKey": "date_of_issue",
+          "convertToDateFromString": true
+        },
+        "Expiration Date": {
+          "pwKey": "expiration_date",
+          "convertToDateFromString": true
+        }
+      }
+    },
+    "drivers_license": {
+      "keys": [
+        "Driver's License"
+      ],
+      "record_type": 2,
+      "category": 0,
+      "fields": {
+        "Number": {
+          "pwKey": "drivers_license_number"
+        },
+        "Name": {
+          "pwKey": "full_name"
+        },
+        "Sex": {
+          "pwKey": "gender"
+        },
+        "Date of Birth": {
+          "pwKey": "date_of_birth",
+          "convertToDateFromString": true
+        },
+        "Address": {
+          "pwKey": "address"
+        },
+        "License Class": {
+          "pwKey": "license_class"
+        },
+        "Country": {
+          "pwKey": "country"
+        },
+        "Expiration Date": {
+          "pwKey": "expiration_date",
+          "convertToDateFromString": true
+        },
+        "Issued on": {
+          "pwKey": "date_of_issue",
+          "convertToDateFromString": true
+        }
+      }
+    },
+    "contacts": {
+      "keys": [
+        "identity",
+        "contact"
+      ],
+      "record_type": 3,
+      "category": 0,
+      "fields": {
+        "First name": {
+          "pwKey": "first_name"
+        },
+        "Last name": {
+          "pwKey": "last_name"
+        },
+        "Gender": {
+          "pwKey": "gender"
+        },
+        "Birth date": {
+          "pwKey": "date_of_birth",
+          "convertToDateFromString": true
+        },
+        "Company": {
+          "pwKey": "company"
+        },
+        "Phone number": {
+          "pwKey": "phone_number"
+        },
+        "E-mail": {
+          "pwKey": "email"
+        },
+        "HOME ADDRESS": {
+          "pwKey": "address"
+        }
+      }
+    },
+    "security_number": {
+      "keys": [
+        "Social Security"
+      ],
+      "record_type": 4,
+      "category": 0,
+      "fields": {
+        "full_name": [
+          {
+            "key": "name"
+          }
+        ],
+        "social_security_number": [
+          {
+            "key": "number"
+          }
+        ]
+      }
+    },
+    "credit_card": {
+      "keys": [
+        "Credit Card"
+      ],
+      "record_type": 5,
+      "category": 1,
+      "fields": {
+        "Issuing bank": {
+          "pwKey": "bank_name"
+        },
+        "Name on Card": {
+          "pwKey": "cardholder_name"
+        },
+        "Number": {
+          "pwKey": "card_number"
+        },
+        "Security Code": {
+          "pwKey": "security_code"
+        },
+        "Type": {
+          "pwKey": "type"
+        },
+        "Expiration Date": {
+          "pwKey": "expiration_date",
+          "convertToDateFromString": true
+        },
+        "PIN": {
+          "pwKey": "pin"
+        },
+        "url": {
+          "pwKey": "url"
+        },
+        "If lost, call": {
+          "pwKey": "phone_number"
+        }
+      }
+    },
+    "bank_account": {
+      "keys": [
+        "Bank Account"
+      ],
+      "record_type": 6,
+      "category": 1,
+      "fields": {
+        "Bank Name": {
+          "pwKey": "bank_name"
+        },
+        "Account holder": {
+          "pwKey": "name_on_account"
+        },
+        "Account Type": {
+          "pwKey": "type"
+        },
+        "Account Number": {
+          "pwKey": "account_number"
+        },
+        "Routing Number": {
+          "pwKey": "routing_number"
+        },
+        "SWIFT Code": {
+          "pwKey": "swift"
+        },
+        "IBAN Number": {
+          "pwKey": "iban"
+        },
+        "Pin": {
+          "pwKey": "pin"
+        },
+        "url": {
+          "pwKey": "url"
+        },
+        "username": {
+          "pwKey": "username"
+        },
+        "password": {
+          "pwKey": "password"
+        }
+      }
+    },
+    "login": {
+      "keys": [
+        "login",
+        "WebForm",
+        "GenericAccount",
+        "[^WI\\-FI Password].*?Password"
+      ],
+      "record_type": 7,
+      "category": 3,
+      "fields": {
+        "Username": {
+          "pwKey": "username"
+        },
+        "E-mail": {
+          "pwKey": "email"
+        },
+        "Website": {
+          "pwKey": "url"
+        },
+        "Password": {
+          "pwKey": "password"
+        }
+      }
+    },
+    "software_license": {
+      "keys": [
+        "Software License"
+      ],
+      "record_type": 8,
+      "category": 2,
+      "fields": {
+        "Product name": {
+          "pwKey": "product_name"
+        },
+        "Version": {
+          "pwKey": "version"
+        },
+        "Key": {
+          "pwKey": "license_key"
+        },
+        "Licensed to": {
+          "pwKey": "licensed_to"
+        },
+        "Registered E-mail": {
+          "pwKey": "registered_email"
+        },
+        "Company": {
+          "pwKey": "company"
+        },
+        "Website": {
+          "pwKey": "url"
+        }
+      }
+    },
+    "email": {
+      "keys": [
+        "Email Account"
+      ],
+      "record_type": 9,
+      "category": 2,
+      "fields": {
+        "Server type": {
+          "pwKey": "server_type"
+        },
+        "username": {
+          "pwKey": "username"
+        },
+        "password": {
+          "pwKey": "password"
+        },
+        "Provider": {
+          "pwKey": "mail_provider"
+        },
+        "url": {
+          "pwKey": "url"
+        },
+        "SMTP Server": {
+          "pwKey": "outgoing_mail_server"
+        },
+        "SMTP Port": {
+          "pwKey": "outgoing_mail_server_port"
+        },
+        "Port": {
+          "pwKey": "incoming_mail_server_port"
+        },
+        "Server": {
+          "pwKey": "incoming_mail_server"
+        }
+      }
+    },
+    "wifi": {
+      "keys": [
+        "Wi-Fi"
+      ],
+      "record_type": 11,
+      "category": 2,
+      "fields": {
+        "SSID": {
+          "pwKey": "ssid"
+        },
+        "Authentication": {
+          "pwKey": "wireless_security_type"
+        },
+        "Network password": {
+          "pwKey": "wireless_network_password"
+        },
+        "username": {
+          "pwKey": "router_management_login"
+        },
+        "password": {
+          "pwKey": "router_management_password"
+        }
+      }
+    },
+    "secure_notes": {
+      "keys": [
+        "note"
+      ],
+      "record_type": 12,
+      "category": 3,
+      "fields": {
+        "note": {
+          "pwKey": "notes"
+        }
+      }
+    }
+  }
+}
